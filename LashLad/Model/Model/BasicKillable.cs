@@ -13,7 +13,7 @@ namespace LashLad.Model
             Health = startHealth;
         }
 
-        public int InflictDamage(int amount, DamageType damageType = DamageType.normal)
+        public int InflictDamage(int amount, DamageType damageType = DamageType.Normal)
         {
             int delta = Health - amount;
             Health = delta < 0 ? 0 : delta;

@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LashLad.Model
+namespace LashLad.Controller
 {
-    interface IEntity
+    class Controller
     {
-        int X { get; }
-        int Y { get; }
     }
 }

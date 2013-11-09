@@ -34,5 +34,7 @@ namespace LashLad.Model
         public int X { protected set; get; }
 
         public int Y { protected set; get; }
+
+        DisplayType IEntity.DisplayType { get { return DisplayType.Human; } }
     }
 }

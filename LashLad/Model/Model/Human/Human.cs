@@ -29,7 +29,7 @@ namespace LashLad.Model
 
 
         #region IKillable
-        public int InflictDamage(int amount, DamageType damageType = DamageType.normal)
+        public int InflictDamage(int amount, DamageType damageType = DamageType.Normal)
         {
             int remainHealth = Killable.InflictDamage(amount, damageType);
             if (remainHealth == 0)
@@ -74,6 +74,13 @@ namespace LashLad.Model
             }
         }
 
+        #endregion
+
+        #region IEntity
+        public DisplayType DisplayType
+        {
+            get { return Model.DisplayType.Human; }
+        }
         #endregion
     }
 }

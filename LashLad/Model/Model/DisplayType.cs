@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace LashLad.Model
 {
-    enum DamageType
+    public enum DisplayType
     {
-        normal
+        NotSet,
+        Human
     }
 }

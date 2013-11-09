@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace LashLad.View
 {
-    class Manager
+    interface IDisplayManager
     {
-        public void Update()
-        {
-
-        }
+        void UpdateScene(IEnumerable<Model.IEntity> displayEntities);
+        IEnumerable<IDisplayObject> GetDisplayObjects();
     }
 }

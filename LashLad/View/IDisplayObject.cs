@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 using System.Drawing;
 
-namespace LashLad.View.Sprites
+namespace LashLad.View
 {
-    interface ISprite
+    interface IDisplayObject
     {
-        Bitmap GetSprite(Model.IEntity Entity);
+        int X { get; }
+        int Y { get; }
+        Bitmap Sprite { get; }
     }
 }

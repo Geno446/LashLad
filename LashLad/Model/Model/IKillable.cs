@@ -14,7 +14,7 @@ namespace LashLad.Model
         /// <param name="amount">The amount to damage</param>
         /// <param name="damageType">Optional damage type </param>
         /// <returns>The health remaining</returns>
-        int InflictDamage(int amount, DamageType damageType = DamageType.normal);
+        int InflictDamage(int amount, DamageType damageType = DamageType.Normal);
 
         int Health { get; }
     }

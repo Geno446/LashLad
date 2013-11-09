@@ -19,6 +19,24 @@ namespace LashLad
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            Timer mainTimer = new Timer();
+            mainTimer.Interval = 30;
+            mainTimer.Tick += mainTimer_Tick;
+            mainTimer.Start();
+        }
+
+        void mainTimer_Tick(object sender, EventArgs e)
+        {
+            MainThread();
+        }
+
+        private void MainThread()
+        {
+
+        }
+
+        private void Draw()
+        {
 
         }
     }
