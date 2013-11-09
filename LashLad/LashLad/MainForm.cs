@@ -12,23 +12,25 @@ namespace LashLad
 {
     public partial class MainForm : Form
     {
+        KeyPressHandler KeyPressHandler;
         public MainForm()
         {
             InitializeComponent();
-            this.KeyDown += new KeyEventHandler(keyPress);
-        }
 
-        private void keyPress(object sender, KeyEventArgs e)
-        {
-            new KeyPressHandler(e.KeyCode);
-        }
+            //
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
+            KeyPressHandler = new KeyPressHandler();
+            this.KeyDown += OnKeyDown;
+
             Timer mainTimer = new Timer();
             mainTimer.Interval = 30;
             mainTimer.Tick += mainTimer_Tick;
             mainTimer.Start();
+        }
+
+        private void OnKeyDown(object sender, KeyEventArgs e)
+        {
+            KeyPressHandler.KeyPress(e.KeyCode);
         }
 
         void mainTimer_Tick(object sender, EventArgs e)

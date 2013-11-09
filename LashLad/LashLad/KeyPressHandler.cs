@@ -8,9 +8,7 @@ namespace LashLad
 {
     class KeyPressHandler
     {
-        private KeyPressHandler(){ }
-
-        public KeyPressHandler(Keys keys)
+        public void KeyPress(Keys keys)
         {
             switch (keys)
             {
