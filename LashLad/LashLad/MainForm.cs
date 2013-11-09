@@ -15,6 +15,12 @@ namespace LashLad
         public MainForm()
         {
             InitializeComponent();
+            this.KeyDown += new KeyEventHandler(keyPress);
+        }
+
+        private void keyPress(object sender, KeyEventArgs e)
+        {
+            new KeyPressHandler(e.KeyCode);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
